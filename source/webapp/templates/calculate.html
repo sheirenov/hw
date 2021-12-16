@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+</head>
+<body>
+    <form action="/result/" method="post">
+        {% csrf_token %}
+        <label>First number:</label><br/>
+        <input type="number" name="first"/><br/>
+        <label>Second number:</label><br/>
+        <input type="number" name="second"><br/>
+        <label>Select an action:</label><br/>
+        <select name="action">
+            <option name="add">add</option>
+            <option name="subtract">subtract</option>
+            <option name="multiply">multiply</option>
+            <option name="divide">divide</option>
+        </select><br/>
+        <br/>
+        <input type="submit" value="Calculate"/>
+    </form>
+</body>
+</html>
